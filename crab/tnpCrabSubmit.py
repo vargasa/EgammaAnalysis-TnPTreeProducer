@@ -4,7 +4,7 @@ import os
 #
 # Example script to submit TnPTreeProducer to crab
 #
-submitVersion = "2020-05-14"
+submitVersion = "2020-05-20"
 doL1matching  = False
 
 defaultArgs   = ['doEleID=True','doPhoID=True','doTrigger=True']
@@ -41,9 +41,9 @@ config.Site.storageSite                = 'T2_CH_CERN'
 # Certified lumis for the different eras
 #
 def getLumiMask(era):
-  if   era=='2016': return 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions16/13TeV/ReReco/Final/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt'
-  elif era=='2017': return 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/13TeV/ReReco/Cert_294927-306462_13TeV_EOY2017ReReco_Collisions17_JSON_v1.txt'
-  elif era=='2018': return 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions18/13TeV/PromptReco/Cert_314472-325175_13TeV_PromptReco_Collisions18_JSON.txt'
+  if   '2016' in era: return 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions16/13TeV/ReReco/Final/Cert_271036-284044_13TeV_23Sep2016ReReco_Collisions16_JSON.txt'
+  elif '2017' in era: return 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions17/13TeV/Legacy_2017/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt'
+  elif '2018' in era: return 'https://cms-service-dqm.web.cern.ch/cms-service-dqm/CAF/certification/Collisions18/13TeV/PromptReco/Cert_314472-325175_13TeV_PromptReco_Collisions18_JSON.txt'
 
 
 #
@@ -60,7 +60,7 @@ def submit(config, requestName, sample, era, json, extraParam=[]):
   config.Data.outLFNDirBase   = '%s/%s/%s/' % (mainOutputDir, era, 'mc' if isMC else 'data')
   config.Data.splitting       = 'FileBased' if isMC else 'LumiBased'
   config.Data.lumiMask        = None if isMC else json
-  config.Data.unitsPerJob     = 5 if isMC else 100
+  config.Data.unitsPerJob     = 5 if isMC else 25
   config.JobType.pyCfgParams  = defaultArgs + ['isMC=True' if isMC else 'isMC=False', 'era=%s' % era] + extraParam
 
   print config

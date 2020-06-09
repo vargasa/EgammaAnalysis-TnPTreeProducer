@@ -1,4 +1,8 @@
+<<<<<<< HEAD:test/log/report_data_UL2017_miniAOD_tnpEleTrig.log
  -- comparing nEvts:  87
+=======
+ -- comparing nEvts:  107
+>>>>>>> origin/RunIIfinal:test/log/report_mc_2017_miniAOD_tnpEleTrig.log
 Used parameters:
 ----------------
 Target file:    rootfiles/TnPTree_data_UL2017_miniAOD.root
@@ -9,13 +13,19 @@ Cut value:      0
 
 Trees properties:
 -----------------
+<<<<<<< HEAD:test/log/report_data_UL2017_miniAOD_tnpEleTrig.log
 Number of events (target/reference): 87/87
 Number of branches (target/reference): 204/209
+=======
+Number of events (target/reference): 107/107
+Number of branches (target/reference): 216/216
+>>>>>>> origin/RunIIfinal:test/log/report_mc_2017_miniAOD_tnpEleTrig.log
 
 Branches which do not differ:
 -----------------------------
 Increase verbosity (-v) to show this
 
+<<<<<<< HEAD:test/log/report_data_UL2017_miniAOD_tnpEleTrig.log
 Entries: 199
 
 Branches which differ:
@@ -27,6 +37,14 @@ el_ptRatio : MSE 0.000101229832934
 el_ptRel : MSE 12.5795128515
 
 Entries: 5
+=======
+Entries: 216
+
+Branches which differ:
+----------------------
+
+Entries: 0
+>>>>>>> origin/RunIIfinal:test/log/report_mc_2017_miniAOD_tnpEleTrig.log
 
 Branches found in reference but not in target:
 ----------------------------------------------
@@ -45,6 +63,7 @@ Entries: 0
 
 Branches in target with a single value in all entries:
 ------------------------------------------------------
+<<<<<<< HEAD:test/log/report_data_UL2017_miniAOD_tnpEleTrig.log
 el_convVtxFitProb : value -1.0
 passingCutBasedLoose94XV2GsfEleConversionVetoCut : value 1
 passingCutBasedLoose94XV2GsfEleEInverseMinusPInverseCut : value 1
@@ -94,6 +113,53 @@ truePU : value 0
 event_BeamSpot_x : value 0.0844484940171
 event_BeamSpot_y : value -0.0299547631294
 event_BeamSpot_z : value 0.445962071419
+=======
+passingCutBasedLoose94XV2GsfEleDPhiInCut : value 1
+passingCutBasedLoose94XV2GsfEleMissingHitsCut : value 1
+passingCutBasedLoose94XV2GsfEleSCEtaMultiRangeCut : value 1
+passingCutBasedLoose94XV2MinPtCut : value 1
+passingCutBasedMedium94XV2GsfEleMissingHitsCut : value 1
+passingCutBasedMedium94XV2GsfEleSCEtaMultiRangeCut : value 1
+passingCutBasedMedium94XV2MinPtCut : value 1
+passingCutBasedTight94XV2GsfEleMissingHitsCut : value 1
+passingCutBasedTight94XV2GsfEleSCEtaMultiRangeCut : value 1
+passingCutBasedTight94XV2MinPtCut : value 1
+passingCutBasedVeto94XV2GsfEleDPhiInCut : value 1
+passingCutBasedVeto94XV2GsfEleMissingHitsCut : value 1
+passingCutBasedVeto94XV2GsfEleSCEtaMultiRangeCut : value 1
+passingCutBasedVeto94XV2MinPtCut : value 1
+run : value 1
+lumi : value 41653
+event_BeamSpot_x : value -0.0247936006635
+event_BeamSpot_y : value 0.0692861005664
+event_BeamSpot_z : value 0.789894998074
+mc_probe_flag : value 1
 
-Entries: 27
+Entries: 20
+
+Branches in reference with a single value in all entries:
+---------------------------------------------------------
+passingCutBasedLoose94XV2GsfEleDPhiInCut : value 1
+passingCutBasedLoose94XV2GsfEleMissingHitsCut : value 1
+passingCutBasedLoose94XV2GsfEleSCEtaMultiRangeCut : value 1
+passingCutBasedLoose94XV2MinPtCut : value 1
+passingCutBasedMedium94XV2GsfEleMissingHitsCut : value 1
+passingCutBasedMedium94XV2GsfEleSCEtaMultiRangeCut : value 1
+passingCutBasedMedium94XV2MinPtCut : value 1
+passingCutBasedTight94XV2GsfEleMissingHitsCut : value 1
+passingCutBasedTight94XV2GsfEleSCEtaMultiRangeCut : value 1
+passingCutBasedTight94XV2MinPtCut : value 1
+passingCutBasedVeto94XV2GsfEleDPhiInCut : value 1
+passingCutBasedVeto94XV2GsfEleMissingHitsCut : value 1
+passingCutBasedVeto94XV2GsfEleSCEtaMultiRangeCut : value 1
+passingCutBasedVeto94XV2MinPtCut : value 1
+run : value 1
+lumi : value 41653
+event_BeamSpot_x : value -0.0247936006635
+event_BeamSpot_y : value 0.0692861005664
+event_BeamSpot_z : value 0.789894998074
+mc_probe_flag : value 1
+>>>>>>> origin/RunIIfinal:test/log/report_mc_2017_miniAOD_tnpEleTrig.log
+
+Entries: 20
 

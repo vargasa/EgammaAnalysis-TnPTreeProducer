@@ -4,6 +4,8 @@ import FWCore.ParameterSet.Config as cms
 ## TREE CONTENT
 #########################################################################
     
+from EgammaAnalysis.TnPTreeProducer.cmssw_version import isReleaseAbove
+
 ZVariablesToStore = cms.PSet(
     eta = cms.string("eta"),
     abseta = cms.string("abs(eta)"),
@@ -122,6 +124,8 @@ EleProbeVariablesToStore = cms.PSet(
     el_found_hits     = cms.string("gsfTrack().found()"), # sometimes called valid_hits
     el_convVtxFitProb  = cms.InputTag("eleVarHelper:convVtxFitProb"),
 
+#    el_hasMatchedConversion = cms.InputTag("eleVarHelper:hasMatchedConversion"),
+
     # Track cluster matching
     el_ep             = cms.string("eSuperClusterOverP()"),
     el_eelepout       = cms.string("eEleClusterOverPout()"),
@@ -158,20 +162,25 @@ PhoProbeVariablesToStore = cms.PSet(
     ph_ESsigma       = cms.string("full5x5_showerShapeVariables.effSigmaRR"),
     ph_hoe           = cms.string("hadronicOverEm"),
 
-#iso
-    ph_chIso    = cms.string("chargedHadronIso"),
-    ph_neuIso   = cms.string("neutralHadronIso"),
-    ph_phoIso   = cms.string("photonIso"),
-    ph_chWorIso = cms.string("chargedHadronWorstVtxIso"),
-
 #pho mva
     ph_mva80X       = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRun2Spring16NonTrigV1Values"),
     ph_mva94X       = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v1p1Values"),
     ph_mva94XV2     = cms.InputTag("photonMVAValueMapProducer:PhotonMVAEstimatorRunIIFall17v2Values"),
+
+# iso
+    ph_chIso    = cms.string("chargedHadronIso"),
+    ph_neuIso   = cms.string("neutralHadronIso"),
+    ph_phoIso   = cms.string("photonIso"),
+    ph_chWorIso = cms.string("chargedHadronWorstVtxIso"),
 )
 
-
-
+if not isReleaseAbove(10, 6): # old way of accessing these in CMSSW_10_2
+    PhoProbeVariablesToStore.ph_sieip    = cms.InputTag("photonIDValueMapProducer:phoFull5x5SigmaIEtaIPhi")
+    PhoProbeVariablesToStore.ph_ESsigma  = cms.InputTag("photonIDValueMapProducer:phoESEffSigmaRR")
+    PhoProbeVariablesToStore.ph_chIso    = cms.InputTag("photonIDValueMapProducer:phoChargedIsolation")
+    PhoProbeVariablesToStore.ph_neuIso   = cms.InputTag("photonIDValueMapProducer:phoNeutralHadronIsolation")
+    PhoProbeVariablesToStore.ph_phoIso   = cms.InputTag("photonIDValueMapProducer:phoPhotonIsolation")
+    PhoProbeVariablesToStore.ph_chWorIso = cms.InputTag("photonIDValueMapProducer:phoWorstChargedIsolation")
 
 TagVariablesToStore = cms.PSet(
     Ele_eta    = cms.string("eta"),

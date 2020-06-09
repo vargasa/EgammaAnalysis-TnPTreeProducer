@@ -25,7 +25,6 @@ def setPileUpConfiguration(process, options):
   elif '2018' in options['era']: data_pu_distribution = data_pu_distribs['2018_DATA_xSec69.2mb']
   elif options['era']=='Run3':   data_pu_distribution = data_pu_distribs['2018_DATA_xSec69.2mb'] # just to have something to reweight to
 
-
   process.pileupReweightingProducer = cms.EDProducer("PileupWeightProducer",
                                   pileupInfoTag = cms.InputTag("slimmedAddPileupInfo"),
                                   PileupMC      = cms.vdouble(mix.input.nbPileupEvents.probValue),

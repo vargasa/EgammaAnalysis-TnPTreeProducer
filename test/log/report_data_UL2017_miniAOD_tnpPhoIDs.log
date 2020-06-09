@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 [ERROR] Directory does not exist in reference file: tnpPhoIDs
+=======
+Error in <TFile::TFile>: file rootfiles/TnPTree_data_UL2017_miniAOD_ref.root does not exist
+[ERROR] Reference file does not exist: rootfiles/TnPTree_data_UL2017_miniAOD_ref.root
+>>>>>>> origin/RunIIfinal

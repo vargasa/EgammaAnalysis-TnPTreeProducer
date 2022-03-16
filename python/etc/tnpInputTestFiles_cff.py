@@ -20,13 +20,13 @@ filesMiniAOD_2016 = {
 
 # Some miniAOD UL testfiles, which are available now and hopefully don't get deleted too soon
 filesMiniAOD_UL2016preVFP = {
-    'mc' :   cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/'),
-    'data' : cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/'),
+    'mc' :   cms.untracked.vstring('file:/eos/home-a/avargash/EGammaSFFramework/data/106X_mcRun2_asymptotic_preVFP_v11-v1_DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8.root'),
+    'data' : cms.untracked.vstring('file:/eos/home-a/avargash/EGammaSFFramework/data/ver1_HIPM_UL2016_MiniAODv2-v2_Run2016B_SingleElectron.root'),
 }
 
 filesMiniAOD_UL2016postVFP = {
-    'mc' :   cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/'),
-    'data' : cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/'),
+    'mc' :   cms.untracked.vstring('file:/eos/home-a/avargash/EGammaSFFramework/data/106X_mcRun2_asymptotic_v17-v1_DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8.root'),
+    'data' : cms.untracked.vstring('file:/eos/home-a/avargash/EGammaSFFramework/data/UL2016_MiniAODv2-v2_Run2016F_SingleElectron.root'),
 }
 
 filesMiniAOD_UL2018 = {
@@ -41,15 +41,6 @@ filesMiniAOD_UL2017 = {
 
 
 # AOD UL testfiles
-filesAOD_UL2016preVFP = {
-    'mc' :   cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/'),
-    'data' : cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/'),
-}
-
-filesAOD_UL2016postVFP = {
-    'mc' :   cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/'),
-    'data' : cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/'),
-}
 
 filesAOD_UL2018 = {
     'mc' :   cms.untracked.vstring('file:/eos/cms/store/group/phys_egamma/tnpTuples/testFiles/RunIISummer19UL18RECO-DYToEE_M-50.root'),

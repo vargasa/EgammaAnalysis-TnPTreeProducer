@@ -139,7 +139,7 @@ elif 'UL2018'  in options['era']:
   options['TnPHLTTagFilters']   = cms.vstring("hltEle32WPTightGsfTrackIsoFilter")
   options['TnPHLTProbeFilters'] = cms.vstring()
   options['HLTFILTERSTOMEASURE']= {"passhltEle32WPTightGsfTrackIsoFilter" : cms.vstring("hltEle32WPTightGsfTrackIsoFilter"),
-                                   "passhltEG175HEFilter" : cms.vstring("hltEG200HEFilter"),
+                                   "passhltEG200HEFilter" : cms.vstring("hltEG200HEFilter"),
                                   }
 
 # Apply L1 matching (using L1Threshold) when flag contains "L1match" in name
